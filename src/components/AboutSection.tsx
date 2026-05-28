@@ -1,8 +1,6 @@
 import { motion } from 'framer-motion'
-import { usePortfolio } from '../hooks/usePortfolio'
 
 export default function AboutSection() {
-  const { profile } = usePortfolio()
 
   const containerVariants = {
     hidden: { opacity: 0 },

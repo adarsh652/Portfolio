@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import { Github, ExternalLink } from 'lucide-react'
 import ProjectCard from './ProjectCard'
 import { usePortfolio } from '../hooks/usePortfolio'
 
