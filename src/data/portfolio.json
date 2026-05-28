@@ -1,0 +1,49 @@
+{
+  "profile": {
+    "name": "Adarsh Shukla",
+    "role": "Final Year BTech CSE Student | Python Learner | Developer",
+    "bio": "Passionate about learning Python, building projects and improving development skills. I'm dedicated to creating scalable applications and exploring modern web technologies.",
+    "location": "India",
+    "avatar": "/ADARSH.jpeg",
+    "social": {
+      "github": "https://github.com/adarsh652",
+      "linkedin": "https://www.linkedin.com/in/adarsh-shukla-261104278",
+      "email": "i.adarshshukla07@gmail.com"
+    }
+  },
+  "skills": {
+    "languages": ["Python", "C", "JavaScript", "TypeScript"],
+    "frontend": ["HTML", "CSS", "React", "Tailwind CSS"],
+    "backend": ["Python", "FastAPI"],
+    "tools": ["Git", "GitHub", "VS Code"]
+  },
+  "projects": [
+    {
+      "id": "1",
+      "title": "Portfolio Website",
+      "description": "A modern, responsive portfolio website built with React and TypeScript. Features dark theme, smooth animations, and glassmorphism design.",
+      "image": "/Screenshot 2026-05-28 124925.png",
+      "technologies": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      "github": "https://github.com",
+      "live": "https://portfolio.example.com",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "title": "AKTU HUB",
+      "description": "AKTU Hub is a web-based student platform that provides a centralized system for accessing notes, previous year question papers (PYQs), syllabus, results, and academic tools through a single user-friendly interface. It helps students save time and improve productivity.",
+      "image": "/Screenshot 2026-05-27 193646.png",
+      "technologies": ["html", "CSS", "Javascript", "Tailwind CSS" , "GitHub", "Vercel"],
+      "github": "https://github.com/adarsh652/AKTU-HUB",
+      "live": "https://aktu-hub-five.vercel.app"
+    },
+    {
+      "id": "3",
+      "title": "Weather App",
+      "description": "Real-time weather application with location-based forecasts and beautiful UI animations.",
+      "image": "/Screenshot 2026-05-27 194154.png",
+      "technologies": ["Python", "Tinkter", "wttr.in API"],
+      "github": "https://github.com/adarsh652/WheatherApp"
+    }
+  ]
+}
