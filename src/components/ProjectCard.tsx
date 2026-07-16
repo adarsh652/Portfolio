@@ -1,85 +1,89 @@
-import { motion } from 'framer-motion'
-import { Github, ExternalLink } from 'lucide-react'
+import { Github, ArrowUpRight } from 'lucide-react'
 import { Project } from '../types/portfolio'
 
 interface ProjectCardProps {
   project: Project
-  featured?: boolean
 }
 
-export default function ProjectCard({ project, featured = false }: ProjectCardProps) {
-  return (
-    <motion.div
-      whileHover={{ y: -8 }}
-      className={`group relative rounded-xl overflow-hidden border border-white/10 hover:border-white/30 transition-all ${
-        featured ? 'md:col-span-2' : ''
-      }`}
-    >
-      {/* Background Gradient on Hover */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+export default function ProjectCard({ project }: ProjectCardProps) {
+  const primaryLink = project.live || project.github
 
-      {/* Image Container */}
-      <div className="relative h-56 md:h-72 overflow-hidden bg-black">
-        <motion.img
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.5 }}
-          src={project.image}
-          alt={project.title}
-          className="w-full h-full object-top"
-        />
+  return (
+    <div className="group relative grid gap-4 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+      {/* Background Hover Effect */}
+      <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
+
+      {/* Left side: Image/Thumbnail */}
+      <div className="z-10 sm:order-1 sm:col-span-2 mt-1">
+        {project.image ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            loading="lazy"
+            className="rounded border-2 border-[#26282E] transition group-hover:border-[#10B981] w-full aspect-[16/10] object-cover object-top"
+          />
+        ) : (
+          <div className="rounded border-2 border-[#26282E] transition group-hover:border-[#10B981] w-full aspect-[16/10] bg-slate-800 flex items-center justify-center text-xs font-semibold text-[#9CA3AF]/60">
+            No Image
+          </div>
+        )}
       </div>
 
-      {/* Content */}
-      <div className="relative p-6 bg-dark/80 backdrop-blur-md">
-        <h3 className="text-2xl font-bold mb-2 text-white group-hover:bg-gradient-accent group-hover:bg-clip-text group-hover:text-transparent transition-all">
-          {project.title}
+      {/* Right side: Project Details */}
+      <div className="z-10 sm:order-2 sm:col-span-6">
+        <h3 className="font-medium leading-snug text-[#F5F5F5]">
+          <div>
+            <a
+              className="inline-flex items-baseline font-medium leading-tight text-[#F5F5F5] hover:text-[#10B981] focus-visible:text-[#10B981] group/link text-base"
+              href={primaryLink}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={`${project.title} (opens in a new tab)`}
+            >
+              {/* Overlay link for full-card clickability on desktop */}
+              <span className="absolute -inset-x-4 -inset-y-4 z-20 hidden rounded md:-inset-x-6 lg:block" />
+              <span>
+                {project.title}
+                <span className="inline-block">
+                  <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#9CA3AF] group-hover/link:text-[#10B981]" />
+                </span>
+              </span>
+            </a>
+          </div>
         </h3>
 
-        <p className="text-white/60 mb-4 leading-relaxed line-clamp-2">
+        <p className="mt-2 text-sm leading-normal text-[#9CA3AF]">
           {project.description}
         </p>
 
-        {/* Technologies */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="px-3 py-1 text-sm rounded-full bg-white/5 border border-white/10 text-white/70 hover:border-white/30 transition-all"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-
-        {/* Links */}
-        <div className="flex gap-3">
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-white/70 hover:text-white transition-all border border-white/10"
-          >
-            <Github size={18} />
-            <span className="text-sm">Code</span>
-          </motion.a>
-
-          {project.live && (
-            <motion.a
-              href={project.live}
+        {/* GitHub link if different from primary link */}
+        {project.live && project.github && (
+          <div className="mt-3 flex items-center gap-1.5 relative z-30">
+            <a
+              href={project.github}
               target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-accent text-white text-sm font-semibold hover:shadow-lg hover:shadow-pink-500/50 transition-all"
+              rel="noreferrer noopener"
+              className="inline-flex items-center gap-1 text-xs font-semibold text-[#9CA3AF] hover:text-[#10B981]"
+              aria-label={`${project.title} GitHub repository`}
             >
-              <ExternalLink size={18} />
-              <span>Live</span>
-            </motion.a>
-          )}
-        </div>
+              <Github className="h-3.5 w-3.5" />
+              <span>View Repository</span>
+            </a>
+          </div>
+        )}
+
+        {/* Technologies badges */}
+        <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Technologies used">
+          {project.technologies.map((tech) => (
+            <li key={tech} className="flex items-center">
+              <span className="rounded-full bg-[#10B981]/10 px-3 py-1 text-xs font-medium leading-5 text-[#10B981]">
+                {tech}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
-    </motion.div>
+    </div>
   )
 }
+

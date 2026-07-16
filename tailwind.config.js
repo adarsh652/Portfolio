@@ -7,12 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        dark: '#000000',
-      },
-      backgroundImage: {
-        'gradient-accent': 'linear-gradient(135deg, #134836 0%, #134836 50%, #184637 100%)',
+        dark: '#0f172a',
       },
     },
   },
   plugins: [],
 }
+

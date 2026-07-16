@@ -1,122 +1,65 @@
-import { motion } from 'framer-motion'
-import { Mail, Github, Linkedin } from 'lucide-react'
 import { usePortfolio } from '../hooks/usePortfolio'
+import { ArrowUpRight } from 'lucide-react'
 
 export default function ContactSection() {
   const { profile } = usePortfolio()
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8 },
-    },
-  }
+  const emailHref = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+    profile.social.email
+  )}&su=${encodeURIComponent('Hello')}&body=${encodeURIComponent(
+    'Hi Adarsh, I saw your portfolio and would like to connect.'
+  )}`
 
   return (
-    <section id="contact" className="py-20 px-4 relative">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          {/* Section Title */}
-          <motion.div variants={itemVariants} className="mb-12 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Get In <span className="bg-gradient-accent bg-clip-text text-transparent">Touch</span>
-            </h2>
-            <p className="text-white/60 text-lg">
-              Let's collaborate and create something amazing together!
-            </p>
-          </motion.div>
+    <section
+      id="contact"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      aria-label="Contact information"
+    >
+      {/* Sticky mobile section header */}
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0B0B0C]/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-0 lg:w-auto lg:bg-transparent lg:px-0 lg:py-0">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-[#F5F5F5] lg:sr-only">
+          Contact
+        </h2>
+      </div>
 
-          {/* Contact Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {[
-                {
-                icon: Mail,
-                label: 'Email',
-                value: profile.social.email,
-                href: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-                profile.social.email
-                )}&su=${encodeURIComponent(
-                'Hello'
-                )}&body=${encodeURIComponent(
-                'Hi Adarsh, I saw your portfolio and would like to connect.'
-                )}`,
-                },
-              {
-                icon: Github,
-                label: 'GitHub',
-                value: 'View Profile',
-                href: profile.social.github,
-              },
-              {
-                icon: Linkedin,
-                label: 'LinkedIn',
-                value: 'Connect',
-                href: profile.social.linkedin,
-              },
-            ].map(({ icon: Icon, label, value, href }) => (
-              <motion.a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:border-white/20 hover:bg-white/10 transition-all text-center group"
-              >
-                <div className="flex justify-center mb-4">
-                  <Icon className="w-8 h-8 text-white/70 group-hover:text-white transition-colors" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{label}</h3>
-                <p className="text-white/60 group-hover:text-white transition-colors">{value}</p>
-              </motion.a>
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          <motion.div
-            variants={itemVariants}
-            className="text-center bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-8 hover:border-white/20 transition-all"
-          >
-            <p className="text-white/70 mb-4">
-              Don't hesitate to reach out. I'm always open to discussing new projects, ideas, or opportunities.
-            </p>
-                <motion.a
-                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-                    profile.social.email
-                )}&su=${encodeURIComponent(
-                    'Hello'
-                )}&body=${encodeURIComponent(
-                    'Hi Adarsh, I saw your portfolio and would like to connect.'
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{scale: 1.05 }}
-                whileTap={{scale: 0.95}}
-                className= "inline-block px-8 py-3 bg-gradient-accent text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-pink-500/50 transition-all"
-
+      <div>
+        <div className="group relative grid gap-4 pb-1 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+          {/* Background Hover Effect */}
+          <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
+          
+          <div className="z-10">
+            <h3 className="font-medium leading-snug text-[#F5F5F5]">
+              <div>
+                <a
+                  className="inline-flex items-baseline font-medium leading-tight text-[#F5F5F5] hover:text-[#10B981] focus-visible:text-[#10B981] group/link text-base"
+                  href={emailHref}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Send an email (opens in a new tab)"
                 >
-              Send Me an Email
-            </motion.a>
-          </motion.div>
-        </motion.div>
+                  <span className="absolute -inset-x-4 -inset-y-4 z-20 hidden rounded md:-inset-x-6 lg:block" />
+                  <span>
+                    Get In Touch
+                    <span className="inline-block">
+                      <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#9CA3AF] group-hover/link:text-[#10B981]" />
+                    </span>
+                  </span>
+                </a>
+              </div>
+            </h3>
+            
+            <p className="mt-2 text-sm leading-normal text-[#9CA3AF]">
+              I'm currently looking for new opportunities and my inbox is always open. Whether you have a question, a project idea, or just want to connect, feel free to drop a message!
+            </p>
+
+            <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-[#9CA3AF]/60">
+              Direct Email: <span className="text-[#F5F5F5] font-normal lowercase">{profile.social.email}</span>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
+

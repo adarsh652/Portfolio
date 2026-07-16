@@ -1,57 +1,33 @@
-import { motion } from 'framer-motion'
+import { usePortfolio } from '../hooks/usePortfolio'
 
 export default function AboutSection() {
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  }
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8 },
-    },
-  }
+  const { profile } = usePortfolio()
 
   return (
-    <section id="about" className="py-20 px-4 relative">
-      <div className="max-w-4xl mx-auto">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-        >
-          {/* Section Title */}
-          <motion.div variants={itemVariants} className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              About <span className="bg-gradient-accent bg-clip-text text-transparent">Me</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-accent rounded-full"></div>
-          </motion.div>
+    <section
+      id="about"
+      className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
+      aria-label="About me"
+    >
+      {/* Sticky mobile section header */}
+      <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-[#0B0B0C]/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-0 lg:w-auto lg:bg-transparent lg:px-0 lg:py-0">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-[#F5F5F5] lg:sr-only">
+          About
+        </h2>
+      </div>
 
-          {/* Content */}
-          <motion.div
-            variants={itemVariants}
-            className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-8 hover:border-white/20 transition-all"
-          >
-            {/* <p className="text-lg text-white/70 leading-relaxed mb-6"> */}
-            {/* {profile.bio} */}
-            {/* </p> */}
-            <p className="text-lg text-white/70 leading-relaxed">
-               I'm a passionate Computer Science student with a strong interest in Python, web development, and modern technologies. I enjoy building real-world projects and continuously improving my development and problem-solving skills.Currently, I'm focused on learning new technologies, strengthening my backend and frontend knowledge, and creating clean, user-friendly applications. I'm always eager to explore new ideas and grow as a develope-r through hands-on experience.
-            </p>
-          </motion.div>
-        </motion.div>
+      <div>
+        <p className="mb-4 leading-relaxed">
+          {profile.bio}
+        </p>
+        <p className="mb-4 leading-relaxed">
+          I'm a passionate Computer Science student with a strong interest in Python, web development, and modern technologies. I enjoy building real-world projects and continuously improving my development and problem-solving skills.
+        </p>
+        <p className="leading-relaxed">
+          Currently, I'm focused on learning new technologies, strengthening my backend and frontend knowledge, and creating clean, user-friendly applications. I'm always eager to explore new ideas and grow as a developer through hands-on experience.
+        </p>
       </div>
     </section>
   )
 }
+
