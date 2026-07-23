@@ -21,10 +21,10 @@ export default function AboutSection() {
           {profile.bio}
         </p>
         <p className="mb-4 leading-relaxed">
-          I'm a passionate Computer Science student with a strong interest in Python, web development, and modern technologies. I enjoy building real-world projects and continuously improving my development and problem-solving skills.
+          My expertise lies in developing responsive frontend interfaces and robust backend systems using modern technologies. I continuously expand my knowledge by building practical projects, exploring new tools, and strengthening my problem-solving skills through Data Structures & Algorithms.
         </p>
         <p className="leading-relaxed">
-          Currently, I'm focused on learning new technologies, strengthening my backend and frontend knowledge, and creating clean, user-friendly applications. I'm always eager to explore new ideas and grow as a developer through hands-on experience.
+          I'm driven by curiosity, continuous learning, and the challenge of creating software that delivers real value. Whether it's designing seamless user experiences or building reliable backend services, I strive to develop applications that are both functional and impactful.
         </p>
       </div>
     </section>
