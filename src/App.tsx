@@ -122,7 +122,7 @@ function App() {
                   {profile.role}
                 </h2>
                 <p className="mt-4 max-w-xs leading-normal text-[#9CA3AF]">
-                  Building accessible, high-performance web applications and mastering Python tools.
+                  Building scalable web applications with modern technologies, clean architecture, and intuitive user experience
                 </p>
 
                 {/* Sidebar Navigation */}
