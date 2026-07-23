@@ -1,7 +1,7 @@
 {
   "profile": {
     "name": "Adarsh Shukla",
-    "role": "Final Year BTech CSE Student | Python Learner | Developer",
+    "role": "Full Stack Developer | Building Real-World Products",
     "bio": "I'm a Full Stack Developer passionate about building modern, scalable web applications that solve real-world problems. I enjoy transforming ideas into intuitive digital experiences while writing clean, maintainable, and efficient code.",
     "location": "India",
     "avatar": "/ADARSH.jpeg",
@@ -12,10 +12,11 @@
     }
   },
   "skills": {
-    "languages": ["Python", "C", "JavaScript", "TypeScript"],
-    "frontend": ["HTML", "CSS", "React", "Tailwind CSS"],
-    "backend": ["Python", "FastAPI"],
-    "tools": ["Git", "GitHub", "VS Code"]
+    "frontend": ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
+    "backend": ["FastAPI", "Node.js", "REST APIs"],
+    "database": ["PostgreSQL", "MongoDB"],
+    "programming": ["Java", "Python", "JavaScript"],
+    "tools": ["Git", "GitHub", "Vercel", "VS Code"]
   },
   "projects": [
     {

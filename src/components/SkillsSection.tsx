@@ -4,10 +4,11 @@ export default function SkillsSection() {
   const { skills } = usePortfolio()
 
   const skillCategories = [
-    { title: 'Languages', items: skills.languages, description: 'Core programming languages used for systems, data, and logic.' },
     { title: 'Frontend', items: skills.frontend, description: 'Libraries and frameworks for crafting beautiful, responsive user interfaces.' },
-    { title: 'Backend', items: skills.backend, description: 'Server-side environments, databases, and API development toolkits.' },
-    { title: 'Tools', items: skills.tools, description: 'Essential software, version control systems, and deployment platforms.' },
+    { title: 'Backend', items: skills.backend, description: 'Server-side environments, database connectivity, and API development toolkits.' },
+    { title: 'Database', items: skills.database, description: 'Structured and unstructured data storage, modeling, and management.' },
+    { title: 'Programming', items: skills.programming, description: 'Core programming languages for algorithms, logical operations, and general computing.' },
+    { title: 'Tools', items: skills.tools, description: 'Version control software, hosting platforms, and local developer environments.' },
   ]
 
   return (

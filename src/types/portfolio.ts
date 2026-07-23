@@ -14,9 +14,10 @@ export interface Profile {
 }
 
 export interface Skills {
-  languages: string[];
   frontend: string[];
   backend: string[];
+  database: string[];
+  programming: string[];
   tools: string[];
 }
 
