@@ -1,67 +1,55 @@
-# Adarsh Shukla - Portfolio
+# Adarsh Shukla | Portfolio
 
-A modern and responsive personal portfolio website built using React, TypeScript, Tailwind CSS, and Framer Motion.
+A modern personal portfolio showcasing my work as a Full Stack Developer, including projects, technical skills, and development journey.
 
-This portfolio showcases my projects, skills, and development journey as a Computer Science student passionate about web development and modern technologies.
-
----
-
-## 🚀 Tech Stack
-
-* React
-* TypeScript
-* Vite
-* Tailwind CSS
-* Framer Motion
+🌐 **Live Website:** https://adarshshukla.vercel.app/
 
 ---
 
-## ✨ Features
+## About
 
-* Responsive modern UI
-* Split-screen hero section
-* Smooth animations
-* Dynamic project showcase
-* Social & contact integration
-* Customizable portfolio data
+This portfolio highlights the projects I've built, the technologies I work with, and my experience building modern web applications. It serves as a central place to explore my work, view source code, and connect with me.
 
 ---
 
-## 📁 Project Structure
+## Tech Stack
 
-```text
-project/
-├── src/
-│   ├── components/
-│   ├── data/
-│   ├── hooks/
-│   ├── types/
-│   ├── App.tsx
-│   └── main.tsx
-│
-├── public/
-├── tailwind.config.js
-├── vite.config.ts
-└── package.json
-```
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
 
 ---
 
-## 🛠️ Setup
+## Features
 
-Install dependencies:
+- Modern responsive design
+- Split-screen landing page
+- Interactive project showcase
+- Skills & education timeline
+- Resume download
+- Contact section
+- Smooth animations
+- Dark theme UI
+
+---
+
+## Running Locally
 
 ```bash
+git clone https://github.com/adarsh652/Portfolio.git
+
+cd Portfolio
+
 npm install
-```
 
-Run development server:
-
-```bash
 npm run dev
 ```
 
-Build for production:
+---
+
+## Build
 
 ```bash
 npm run build
@@ -69,22 +57,16 @@ npm run build
 
 ---
 
-## 📌 Projects Included
+## Connect With Me
 
-* AKTU HUB
-* Weather App
-* Personal Portfolio Website
+GitHub  
+https://github.com/adarsh652
 
----
+LinkedIn  
+https://linkedin.com/in/adarsh-shukla-261104278
 
-## 📬 Contact
+Portfolio  
+https://adarshshukla.vercel.app/
 
-* GitHub: https://github.com/adarsh652
-* LinkedIn: https://linkedin.com/in/adarsh-shukla-261104278
-* Email: [i.adarshshukla07@gmail.com](mailto:i.adarshshukla07@gmail.com)
-
----
-
-## 🌐 Visit My Portfolio
-https://portfolio-five-sigma-78.vercel.app/
-
+Email  
+i.adarshshukla07@gmail.com
