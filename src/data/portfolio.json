@@ -21,19 +21,18 @@
   "projects": [
     {
       "id": "1",
-      "title": "Portfolio Website",
-      "description": "A modern, responsive portfolio website built with React and TypeScript. Features dark theme, smooth animations, and glassmorphism design.",
-      "image": "/Screenshot 2026-05-28 124925.png",
-      "technologies": ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      "github": "https://github.com",
-      "live": "https://portfolio.example.com",
-      "featured": true
+      "title": "InspectUI",
+      "description": "InspectUI is a Chrome extension that helps developers inspect, understand, and recreate modern web interfaces. It combines live UI inspection, frontend technology detection, Tailwind CSS generation, accessibility auditing, and AI-powered implementation guidance in a single workflow.",
+      "image": "/InspectUi_ss.png",
+      "technologies": ["Manifest V3", "Vanilla JavaScript", "Chrome APIs", "Gemini API", "HTML5", "CSS3"],
+      "github": "https://github.com/adarsh652/InspectUI",
+      "live": ""
     },
     {
       "id": "2",
       "title": "AKTU HUB",
       "description": "AKTU Hub is a web-based student platform that provides a centralized system for accessing notes, previous year question papers (PYQs), syllabus, results, and academic tools through a single user-friendly interface. It helps students save time and improve productivity.",
-      "image": "/Screenshot 2026-05-27 193646.png",
+      "image": "/aktuhub_ss.png",
       "technologies": ["html", "CSS", "Javascript", "Tailwind CSS" , "GitHub", "Vercel"],
       "github": "https://github.com/adarsh652/AKTU-HUB",
       "live": "https://aktu-hub-six.vercel.app"

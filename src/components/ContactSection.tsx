@@ -24,15 +24,15 @@ export default function ContactSection() {
       </div>
 
       <div>
-        <div className="group relative grid gap-4 pb-1 transition-all lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+        <div className="group relative grid gap-4 pb-1 transition-all duration-300 ease-out lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
           {/* Background Hover Effect */}
-          <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
+          <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md border border-transparent transition duration-300 ease-out motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
           
           <div className="z-10">
             <h3 className="font-medium leading-snug text-[#F5F5F5]">
               <div>
                 <a
-                  className="inline-flex items-baseline font-medium leading-tight text-[#F5F5F5] hover:text-[#10B981] focus-visible:text-[#10B981] group/link text-base"
+                  className="inline-flex items-baseline font-medium leading-tight text-[#F5F5F5] hover:text-[#10B981] focus-visible:text-[#10B981] transition-colors duration-300 ease-out group/link text-base"
                   href={emailHref}
                   target="_blank"
                   rel="noreferrer noopener"
@@ -42,7 +42,7 @@ export default function ContactSection() {
                   <span>
                     Get In Touch
                     <span className="inline-block">
-                      <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#9CA3AF] group-hover/link:text-[#10B981]" />
+                      <ArrowUpRight className="inline-block h-4 w-4 shrink-0 transition-transform duration-300 ease-out group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px text-[#9CA3AF] group-hover/link:text-[#10B981]" />
                     </span>
                   </span>
                 </a>

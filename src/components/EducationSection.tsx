@@ -55,16 +55,16 @@ export default function EducationSection() {
               )}
 
               {/* Desktop circular marker */}
-              <span className="absolute left-[25%] top-1.5 w-3.5 h-3.5 rounded-full bg-[#10B981] border-4 border-[#0B0B0C] -translate-x-1/2 hidden sm:block z-10 transition-transform group-hover:scale-125 shadow-[0_0_8px_rgba(16,185,129,0.3)]" />
+              <span className="absolute left-[25%] top-1.5 w-3.5 h-3.5 rounded-full bg-[#10B981] border-4 border-[#0B0B0C] -translate-x-1/2 hidden sm:block z-10 transition-transform duration-300 ease-out group-hover:scale-125 shadow-[0_0_8px_rgba(16,185,129,0.3)]" />
 
               {/* Mobile circular marker */}
               <span className="absolute -left-6 top-1.5 w-3.5 h-3.5 rounded-full bg-[#10B981] border-4 border-[#0B0B0C] -translate-x-1/2 sm:hidden z-10" />
 
               {/* Background Card Hover Effect */}
-              <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
+              <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md border border-transparent transition duration-300 ease-out motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
 
               {/* Card Grid Layout */}
-              <div className="group relative grid gap-2 pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 z-10">
+              <div className="group relative grid gap-2 pb-1 transition-all duration-300 ease-out sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50 z-10">
                 {/* Left: Year / Date */}
                 <div className="sm:col-span-2 text-xs font-semibold uppercase tracking-wide text-[#9CA3AF]/60 mt-1 sm:text-right sm:pr-8">
                   {item.period}
@@ -72,7 +72,7 @@ export default function EducationSection() {
 
                 {/* Right: Education Details */}
                 <div className="sm:col-span-6 sm:pl-8">
-                  <h3 className="font-medium leading-snug text-[#F5F5F5] text-base group-hover:text-[#10B981] transition-colors">
+                  <h3 className="font-medium leading-snug text-[#F5F5F5] text-base group-hover:text-[#10B981] transition-colors duration-300 ease-out">
                     {item.degree}
                   </h3>
                   <p className="mt-1 text-sm leading-normal text-[#9CA3AF]">

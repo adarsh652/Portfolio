@@ -28,9 +28,9 @@ export default function SkillsSection() {
         <ul className="group/list">
           {skillCategories.map((category) => (
             <li key={category.title} className="mb-12">
-              <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
+              <div className="group relative grid pb-1 transition-all duration-300 ease-out sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50">
                 {/* Background Card Hover Effect */}
-                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
+                <div className="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md border border-transparent transition duration-300 ease-out motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-[#17181C] lg:group-hover:border-[#26282E] lg:group-hover:shadow-lg" />
                 
                 {/* Left side: Category Title */}
                 <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-[#9CA3AF]/60 sm:col-span-2">
